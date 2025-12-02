@@ -30,7 +30,7 @@ const AddJob = () => {
     };
 
     // ✅ FIX: fetch is inside formSubmit, not outside component
-    const res = await fetch("/api/jobs", {
+    const res = await fetch("http://localhost:5000/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
