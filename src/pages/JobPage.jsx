@@ -12,7 +12,7 @@ const JobPage = () => {
     useEffect(() => {
         const fetchJob = async () => {
             try {
-                const res = await fetch(`http://localhost:5000/jobs/${id}`);
+                const res = await fetch(`/api/jobs/${id}`);
                 const data = await res.json();
                 setJob(data);
             } catch (error) {
@@ -31,7 +31,7 @@ const JobPage = () => {
         if (!window.confirm("Are you sure you want to delete this job?")) return;
 
         try {
-            await fetch(`http://localhost:5000/jobs/${id}`, {
+            await fetch(`/api/jobs/${id}`, {
                 method: "DELETE",
             });
 
